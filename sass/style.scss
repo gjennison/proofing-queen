@@ -1,0 +1,192 @@
+$nav-column-view: 944px;
+$services-column-view: 648px;
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+h1{
+	color: #332A86;
+}
+
+.container{
+	max-width: 960px;
+}
+
+nav{
+	position: fixed;
+}
+
+.display-menu{
+	display: flex;
+}
+
+.nav-content{
+	position: relative;
+	top: -82px;
+	display: flex;
+	justify-content: space-between;
+	color: #332A86;
+
+
+	#menu, #hover-links{
+		display: none;
+	}
+
+	#hover-links{
+		position: absolute;
+		top: 15px;
+
+		.hover-link{
+			background-color: lightgrey;
+			padding: 6px;
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+	}
+
+	.nav-links{
+		display: flex;
+	
+		.nav-link{
+			padding-left: 16px;
+			border-right: 1px solid grey;
+			font-size: 0.9em;
+			text-decoration: none;
+		}
+	
+		.nav-link:last-child{
+			border-right: none;
+		}
+	}
+
+	span, .nav-link{
+		padding-right: 16px;
+	}
+
+	@media screen and (max-width: $nav-column-view){
+
+		justify-content: space-evenly;
+		.nav-link{
+			display: none;
+		}
+
+		span{
+			opacity: 0;
+		}
+
+		#menu{
+			display: inline;
+		}
+
+		#hover-links{
+			// display: flex;
+			flex-direction: column;
+		}
+		
+	}
+}
+
+
+#services{
+
+	margin-top: 80px;
+	margin-bottom: 80px;
+
+	.row{
+		display: flex;
+		margin-bottom: 32px;
+		align-items: center;
+
+		img{
+			width: 400px;
+			border-radius: 16px;
+		}
+
+		.content{
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+
+	}
+	@media screen and (max-width: $services-column-view){
+		.row{
+			flex-direction: column;
+		}
+
+		.row:nth-child(2){
+			flex-direction: column-reverse;
+		}
+	}
+
+}
+#our-work{
+	margin-top: 32px;
+
+	#clients-projects{
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.content{
+		padding: 0;
+	}
+
+	#testimonials{
+		margin-top: 32px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.card{
+			padding: 16px;
+			width: 45%;
+			box-sizing: border-box;
+			margin: 8px;
+		}
+
+		.card:nth-child(2n){
+			background-color: lightgrey;
+			// flex-grow: 1;
+		}
+		.card:nth-child(2n-1){
+			background-color: rgba(84, 163, 216, 0.486);
+			// color: white;
+		}
+	}
+
+}
+
+#contact{
+	margin-top: 80px;
+	width: 100%;
+	background-color: rgba(84, 97, 216, 0.886);
+	color: aliceblue;
+
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	h1{
+		color: aliceblue;
+	}
+
+	#contacts{
+		div{
+			margin-bottom: 8px;
+			font-size: 1.1em;
+
+			i{
+				margin-right: 8px;
+			}
+		}
+	}
+}

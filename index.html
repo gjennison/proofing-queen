@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proofing Queen</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/edbd407585.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<nav id="nav">
+			<img src="assets/header.png" alt="">
+
+			<div class="nav-content">
+				<div class="nav-links">
+					<a href="#nav" class="nav-link">HOME</a>
+					<a href="#services" class="nav-link">SERVICES</a>
+					<a href="#our-work" class="nav-link">OUR WORK</a>
+					<a href="#contact" class="nav-link">CONTACT</a>
+					
+					<div id="menu">menu
+						<div id="hover-links">
+							<a href="#nav" class="hover-link">HOME</a>
+							<a href="#services" class="hover-link">SERVICES</a>
+							<a href="#our-work" class="hover-link">OUR WORK</a>
+							<a href="#contact" class="hover-link">CONTACT</a>
+						</div>
+					</div>
+				</div>
+
+				<span>Get In Touch: 604-488-0282</span>
+			</div>
+		</nav>
+
+		<h1>Services</h1>
+
+		<section id="services">
+			<div class="row" id="proofreading">
+				<img src="assets/proofreading.jpg" alt="">
+				<div class="content">
+					<h1>Proofreading</h1>
+					<p>We stop typos dead in their tracks, obviously. We also scan for basic grammar (anyone feeling “tense”?), punctuation problems (comma police, move along: nothing to see here) and, of course, correct spelling (“their” more common than you think).</p>
+				</div>
+			</div>
+			<div class="row" id="fact-checking">
+				<div class="content">
+					<h1>Fact Checking</h1>
+					<p>Thacfaink you got that historical date right? Fairly sure you have the correct title for the poem that’s being placed on the inside cover? Numbers got you feeling, erm, crunched?</p>
+				</div>
+				<img src="assets/fact-checking.jpg" alt="">
+			</div>
+			<div class="row" id="markup">
+				<img src="assets/markup.jpg" alt="">
+				<div class="content">
+					<h1>Markup</h1>
+					<p>So, once the material is thoroughly proofread and
+						fact-checked, how do our comments arrive? We tried sending them on a scroll with a herald, but that posed obvious problems, and heads rolled (so to speak). So we devised a system that is better for everyone.</p>
+				</div>
+			</div>
+		</section>
+
+		<h1>Our Work</h1>
+
+		<section id="our-work">
+			<div id="clients-projects">
+				<div class="content">
+					<h1>Clients</h1>
+					<p>460 Group</p>
+					<p>Cossette</p>
+					<p>Evans Hunt</p>
+					<p>Lucent Strategies</p>
+					<p>PavCo</p>
+					<p>Rethink</p>
+					<p>Rocky Mountaineer</p>
+					<p>Straydog Branding</p>
+				</div>
+				<div class="content">
+					<h1>Projects</h1>
+					<p>BC Hydro Site C Reports
+					</p>
+					<p>Coast Capital Savings Brochures
+					</p>
+					<p>Goldcorp Brochures
+					</p>
+					<p>White Spot</p>
+					<p>Quiznos Marketing Materials
+					</p>
+					<p>Rocky Mountaineer Annual Brochures
+					</p>
+					<p>Immigration</p>
+					<p>UniverCity Marketing Materials
+					</p>
+				</div>
+			</div>
+
+			<h1>Testimonials</h1>
+
+			<div id="testimonials">
+				<div class="card">Sharon is an Argus-eyed professional proofreader. Her attention to detail and keen eye for infelicities of style and format are superlative and her annotated PDFs clear and comprehensive. She’s a pleasure to work with.
+					<br>
+					<br>
+					– Edie Van Alstine, Manager, Quality Assurance, McMillan</div>
+				<div class="card">We have a rule in our studio – don’t let anything leave the building until Sharon has put her eagle eyes on it. She’ll catch things a dozen other people will miss. It’s way better (and cheaper) to have Sharon catch the typo before you (finally) see it in print.
+					<br>
+					<br>
+					– Sian Pairaudeau (formerly with Braun/Allison), now Project Manager, Invoke Media</div>
+				<div class="card">It is our pleasure working with Sharon, the ProofingQueen. She is professional, reliable and a valued member of our team at Rennie Marketing Systems. In our business, proofing mistakes are extremely costly, dollar-wise and time-wise – Sharon’s work has saved us from both. Thank you, Sharon!
+					<br>
+					<br>
+					– Rennie Marketing Systems</div>
+				<div class="card">Organized, focused and very efficient describes this “Queen”. Ms. McInnis is attentive to all the demanding details that can easily be overlooked. Highly recommended. A pleasure to work with.
+					<br>
+					<br>
+					– Terry Zacharko, Zacharko Design Partnership</div>
+			</div>
+		</section>
+
+	</div>
+	<section id="contact">
+		<h1>Contact us</h1>
+
+		<div id="contacts">
+			<div><i class="fas fa-phone"></i> <span>604-488-0282</span></div>
+			<div><i class="fas fa-envelope"></i><span>mail@proofingqueen.com</span></div>
+			<div><i class="fas fa-location-arrow"></i><span>PO Box 3357 Stn Terminal, Vancouver, BC V6B 3Y3</span></div>
+		</div>
+		
+
+	</section>
+
+	<script>
+		var menu = document.querySelector('#menu');
+		var hoverLinks = document.querySelector('#hover-links');
+
+		menu.addEventListener('mouseover', function(){
+			console.log('hey')
+			hoverLinks.classList.toggle('display-menu');
+			hoverLinks.style.display = "flex";
+			console.log(hoverLinks.classList)
+		})
+
+		menu.addEventListener('mouseleave', function(){
+			hoverLinks.style.display = "none";
+		})
+	</script>
+</body>
+</html>
