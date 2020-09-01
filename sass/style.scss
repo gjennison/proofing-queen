@@ -14,6 +14,11 @@ body{
 	margin: 0;
 }
 
+p{
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
 h1{
 	color: #332A86;
 }
@@ -44,13 +49,21 @@ nav{
 
 	#hover-links{
 		position: absolute;
-		top: 15px;
+		left: 8px;
+		top: 30px;
 
 		.hover-link{
-			background-color: lightgrey;
+			background-color: rgba(84, 163, 216, 0.486);
+			// box-shadow: rgba(84, 163, 216, 0.486);
 			padding: 6px;
 			margin-top: 4px;
 			margin-bottom: 4px;
+			margin: 4px;
+			text-decoration: none;
+
+			&:hover{
+				box-shadow: 0px 0px 4px rgba(84, 163, 216, 0.486);
+			}
 		}
 	}
 
@@ -75,7 +88,7 @@ nav{
 
 	@media screen and (max-width: $nav-column-view){
 
-		justify-content: space-evenly;
+		justify-content: space-between;
 		.nav-link{
 			display: none;
 		}
@@ -108,8 +121,9 @@ nav{
 		align-items: center;
 
 		img{
-			width: 400px;
+			width: 100%;
 			border-radius: 16px;
+			padding: 8px;
 		}
 
 		.content{
@@ -147,20 +161,32 @@ nav{
 		flex-wrap: wrap;
 		justify-content: center;
 
+		font-size: 1.2em;
+		line-height: 1.2em;
+
 		.card{
 			padding: 16px;
 			width: 45%;
 			box-sizing: border-box;
 			margin: 8px;
+			background-color: rgba(84, 163, 216, 0.486);
+
+			@media screen and (max-width: $services-column-view){
+				width: 100%;
+			}
+		}
+		.card:first-child, .card:last-child{
+			background-color: lightgrey;
 		}
 
-		.card:nth-child(2n){
-			background-color: lightgrey;
-			// flex-grow: 1;
-		}
-		.card:nth-child(2n-1){
-			background-color: rgba(84, 163, 216, 0.486);
-			// color: white;
+		@media screen and (max-width: $services-column-view){
+			.card:nth-child(2n-1){
+				background-color: rgba(84, 163, 216, 0.486);
+			}
+
+			.card:nth-child(2n){
+				background-color: lightgrey;
+			}
 		}
 	}
 
@@ -190,3 +216,87 @@ nav{
 		}
 	}
 }
+
+// HAMBURGER ICON
+
+
+#nav-icon3{
+	width: 16px;
+	height: 6px;
+	position: relative;
+	margin: 0px auto;
+	margin-left: 20px;
+	top: -5px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+  }
+  
+
+  #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+	display: block;
+	position: absolute;
+	height: 6px;
+	width: 100%;
+	background: #332A86;
+	border-radius: 6px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+  }
+
+
+
+
+  #nav-icon3 span:nth-child(1) {
+	top: 0px;
+  }
+  
+  #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+	top: 10px;
+  }
+  
+  #nav-icon3 span:nth-child(4) {
+	top: 20px;
+  }
+  
+  #nav-icon3.open span:nth-child(1) {
+	top: 10px;
+	width: 0%;
+	left: 50%;
+	opacity: 0;
+  }
+  
+  #nav-icon3.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+  
+  #nav-icon3.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+  }
+  
+  #nav-icon3.open span:nth-child(4) {
+	top: 10px;
+	width: 0%;
+	left: 50%;
+	opacity: 0;
+  }

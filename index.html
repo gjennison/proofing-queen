@@ -19,7 +19,15 @@
 					<a href="#our-work" class="nav-link">OUR WORK</a>
 					<a href="#contact" class="nav-link">CONTACT</a>
 					
-					<div id="menu">menu
+					<div id="menu">
+
+						<div id="nav-icon3">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+
 						<div id="hover-links">
 							<a href="#nav" class="hover-link">HOME</a>
 							<a href="#services" class="hover-link">SERVICES</a>
@@ -130,18 +138,35 @@
 	</section>
 
 	<script>
-		var menu = document.querySelector('#menu');
+		// var menu = document.querySelector('#menu');
 		var hoverLinks = document.querySelector('#hover-links');
 
-		menu.addEventListener('mouseover', function(){
-			console.log('hey')
-			hoverLinks.classList.toggle('display-menu');
-			hoverLinks.style.display = "flex";
-			console.log(hoverLinks.classList)
-		})
+		// menu.addEventListener('mouseover', function(){
+		// 	console.log('hey')
+		// 	hoverLinks.classList.toggle('display-menu');
+		// 	hoverLinks.style.display = "flex";
+		// 	console.log(hoverLinks.classList)
+		// })
 
-		menu.addEventListener('mouseleave', function(){
-			hoverLinks.style.display = "none";
+		// menu.addEventListener('mouseleave', function(){
+		// 	hoverLinks.style.display = "none";
+		// })
+
+		var display = false;
+
+		const burger = document.querySelector('#nav-icon3');
+
+		burger.addEventListener('click', function(){
+			burger.classList.toggle('open')
+
+			if(display){
+				hoverLinks.style.display = "none";
+				display = false;
+			}
+			else{
+				hoverLinks.style.display = "flex";
+				display = true;
+			}
 		})
 	</script>
 </body>

@@ -18,6 +18,11 @@ body {
   margin: 0;
 }
 
+p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
 h1 {
   color: #332A86;
 }
@@ -54,14 +59,22 @@ nav {
 
 .nav-content #hover-links {
   position: absolute;
-  top: 15px;
+  left: 8px;
+  top: 30px;
 }
 
 .nav-content #hover-links .hover-link {
-  background-color: lightgrey;
+  background-color: rgba(84, 163, 216, 0.486);
   padding: 6px;
   margin-top: 4px;
   margin-bottom: 4px;
+  margin: 4px;
+  text-decoration: none;
+}
+
+.nav-content #hover-links .hover-link:hover {
+  -webkit-box-shadow: 0px 0px 4px rgba(84, 163, 216, 0.486);
+          box-shadow: 0px 0px 4px rgba(84, 163, 216, 0.486);
 }
 
 .nav-content .nav-links {
@@ -87,9 +100,9 @@ nav {
 
 @media screen and (max-width: 944px) {
   .nav-content {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .nav-content .nav-link {
     display: none;
@@ -124,8 +137,9 @@ nav {
 }
 
 #services .row img {
-  width: 400px;
+  width: 100%;
   border-radius: 16px;
+  padding: 8px;
 }
 
 #services .row .content {
@@ -175,6 +189,8 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 1.2em;
+  line-height: 1.2em;
 }
 
 #our-work #testimonials .card {
@@ -183,14 +199,26 @@ nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 8px;
+  background-color: rgba(84, 163, 216, 0.486);
 }
 
-#our-work #testimonials .card:nth-child(2n) {
+@media screen and (max-width: 648px) {
+  #our-work #testimonials .card {
+    width: 100%;
+  }
+}
+
+#our-work #testimonials .card:first-child, #our-work #testimonials .card:last-child {
   background-color: lightgrey;
 }
 
-#our-work #testimonials .card:nth-child(2n-1) {
-  background-color: rgba(84, 163, 216, 0.486);
+@media screen and (max-width: 648px) {
+  #our-work #testimonials .card:nth-child(2n-1) {
+    background-color: rgba(84, 163, 216, 0.486);
+  }
+  #our-work #testimonials .card:nth-child(2n) {
+    background-color: lightgrey;
+  }
 }
 
 #contact {
@@ -213,5 +241,70 @@ nav {
 
 #contact #contacts div i {
   margin-right: 8px;
+}
+
+#nav-icon3 {
+  width: 16px;
+  height: 6px;
+  position: relative;
+  margin: 0px auto;
+  margin-left: 20px;
+  top: -5px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #332A86;
+  border-radius: 6px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+  top: 10px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 20px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+  opacity: 0;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
